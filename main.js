@@ -26,5 +26,5 @@ function permutations(input) {
     }
     permute(input, input.length);
 
-    return [...new Set(result.map(a => a.join('')))];
+    return result.sort();
 }
