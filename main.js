@@ -1,4 +1,4 @@
-function permutations(s) {
+function permutations(input) {
     const result = [];
 
     function permute(arr, size) {
@@ -24,7 +24,7 @@ function permutations(s) {
                 swap(i, size - 1);
         }
     }
-    permute(s.split(''), s.length);
+    permute(input, input.length);
 
     return [...new Set(result.map(a => a.join('')))];
 }
